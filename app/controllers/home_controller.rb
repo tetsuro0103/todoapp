@@ -7,5 +7,4 @@ class HomeController < ApplicationController
     @about = 'about'
   end
 
-
 end
