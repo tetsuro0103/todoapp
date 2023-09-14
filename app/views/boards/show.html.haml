@@ -1,0 +1,16 @@
+.container
+  .title_header
+    = @board.name
+  - @cards.each do |card|
+    = link_to card_path(card) do
+      .card
+        .card_content
+          .card_name
+            = card.name
+          .card_description
+            = card.description
+          .card_user_avatar_image
+            = image_tag card.board.user.avatar_image
+  = link_to new_card_path do
+    .new-btn
+      %p + Add new card

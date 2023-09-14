@@ -3,7 +3,7 @@
 $avatar-size: 32px;
 $container-padding: 16px;
 
-.card {
+.board {
   background-color: #f4f4f4;
   border-radius: 20px;
   margin-bottom: 26px;
@@ -64,25 +64,32 @@ $container-padding: 16px;
   }
 
   &_content {
+    display: flex;
     padding-bottom: 6px;
   }
 
 
+
+
 }
 
-
+  .title_header {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
 .dropdown {
   size: 24px;
   margin-right: 16px;
 }
 
-.card_description {
+.board_description {
   font-size: 14px;
   margin-bottom: 30px;
 }
 
-.card_user_avatar_image {
+.board_user_avatar_image {
   img {
     width: 30px;
   }
