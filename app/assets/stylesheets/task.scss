@@ -3,15 +3,31 @@
 $avatar-size: 32px;
 $container-padding: 16px;
 
-.card {
+.task {
   background-color: #f4f4f4;
   border-radius: 20px;
   margin-bottom: 26px;
   padding: $container-padding $container-padding;
   position: relative;
 
+
+
+  &_eyecatch {
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+
     &_name {
       font-size: 18px;
+    }
+
+    &_description {
+      background-color: #f4f4f4;
+      border-radius: 20px;
+      padding: 20px 15px;
+      margin: 30px 0px;
     }
 
     &_image {
@@ -70,19 +86,21 @@ $container-padding: 16px;
 
 }
 
-
+.title_edit {
+  display: flex;
+}
 
 .dropdown {
   size: 24px;
   margin-right: 16px;
 }
 
-.card_description {
+.task_description {
   font-size: 14px;
   margin-bottom: 30px;
 }
 
-.card_user_avatar_image {
+.task_user_avatar_image {
   img {
     width: 30px;
   }

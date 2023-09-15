@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'about' => 'articles#about'
 
   resources :boards
-  resources :cards do
+  resources :tasks do
     resources :comments, only: [:new, :create]
   end
 end

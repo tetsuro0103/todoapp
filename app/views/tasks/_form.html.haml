@@ -1,0 +1,24 @@
+.container
+  .title_header
+    New Card
+  %ul
+    - @task.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @task, url: tasks_path, method: 'post', local: true) do |f|
+    %div
+      = f.label :name, 'Name'
+    %div
+      = f.text_field :name, class: 'text'
+    %div
+      = f.label :description, 'Description'
+    %div
+      = f.text_area :description
+    %div
+      = f.label :limit, 'Limit'
+    %div
+      = f.date_field :limit, class: 'text'
+    %div
+      = f.label :eyecatch, 'Eyecatch'
+    %div
+      = f.file_field :eyecatch
+    = f.submit 'Submit', class: 'btn-primary'
