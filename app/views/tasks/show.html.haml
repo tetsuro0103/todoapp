@@ -1,0 +1,21 @@
+.container
+  .title_edit
+    .title_header
+      = @task.name
+    - if user_signed_in? && current_user.task_has_written?(@task)
+      .board_detail_actions
+        .dropdown
+          = image_tag 'actions.svg', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to 'Edit', edit_task_path(@task)
+            = link_to 'Delete', task_path(@task), data: { method: 'delete', confirm: '本当に削除してもよろしいですか?' }
+  - if @task.eyecatch.attached?
+    .task_eyecatch
+      = image_tag @task.eyecatch
+  .task_description
+    = @task.description
+  .task_limit
+    = @task.limit
+  .task_comment
+    .title_header
+      Comment

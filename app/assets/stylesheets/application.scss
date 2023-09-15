@@ -1,6 +1,6 @@
 @import 'header';
 @import 'variables';
-@import 'card';
+@import 'task';
 @import 'form';
 @import 'buttons';
 @import 'board';
@@ -55,4 +55,10 @@ a {
     i {
       margin-top: 22px;
     }
+  }
+
+  .title_header {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
   }

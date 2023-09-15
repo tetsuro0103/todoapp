@@ -1,16 +1,19 @@
 .container
   .title_header
     = @board.name
-  - @cards.each do |card|
-    = link_to card_path(card) do
-      .card
-        .card_content
-          .card_name
-            = card.name
-          .card_description
-            = card.description
-          .card_user_avatar_image
-            = image_tag card.board.user.avatar_image
-  = link_to new_card_path do
+  - @tasks.each do |task|
+    = link_to task_path(task) do
+      .task
+        .task_content
+          .task_eyecatch
+            - if task.eyecatch.attached?
+              = image_tag task.eyecatch
+          .task_name
+            = task.name
+          .task_description
+            = task.description
+          .task_user_avatar_image
+            = image_tag task.user.avatar_image
+  = link_to new_task_path do
     .new-btn
-      %p + Add new card
+      %p + Add new Card
