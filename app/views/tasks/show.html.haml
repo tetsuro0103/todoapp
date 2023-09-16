@@ -19,3 +19,13 @@
   .task_comment
     .title_header
       Comment
+
+.container
+  - @cardcomments.each do |cardcomment|
+    .task_comment
+      %p= cardcomment.content
+
+.container
+  = link_to new_task_cardcomment_path(@task) do
+    .new-btn
+      %p + Add new comment

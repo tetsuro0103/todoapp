@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
   has_one_attached :eyecatch
-
+  has_many :cardcomments, dependent: :destroy
   belongs_to :user
 
         def display_created_at
