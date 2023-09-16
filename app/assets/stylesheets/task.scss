@@ -10,6 +10,16 @@ $container-padding: 16px;
   padding: $container-padding $container-padding;
   position: relative;
 
+  &_info {
+    display: flex;
+  }
+
+  &_user {
+    img {
+      width: 40px;
+      margin-right: 15px;
+    }
+  }
 
 
   &_eyecatch {
