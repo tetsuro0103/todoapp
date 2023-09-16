@@ -22,8 +22,19 @@
 
 .container
   - @cardcomments.each do |cardcomment|
-    .task_comment
-      %p= cardcomment.content
+    - kuser = @users.where(id: cardcomment.user_id)
+    - kuser = kuser.to_a
+    - nuser = User.new
+    - nuser.id = kuser[0].id
+    - nuser.email = kuser[0].email
+    - nuser.created_at = kuser[0].created_at
+    - nuser.updated_at = kuser[0].updated_at
+    .task_info
+      .task_user
+        = image_tag nuser.avatar_image
+
+      .task_comment
+        %p= cardcomment.content
 
 .container
   = link_to new_task_cardcomment_path(@task) do

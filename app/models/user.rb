@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :boards, dependent: :destroy
   has_many :tasks, dependent: :destroy
 
+  has_one :profile, dependent: :destroy
+
   def board_has_written?(board)
     boards.exists?(id: board.id)
   end
@@ -18,9 +20,17 @@ class User < ApplicationRecord
   def display_name
     self.email.split('@').first
   end
-  
+
   def avatar_image
-    'default-avatar.png'
+    if profile&.avatar&.attached?
+      profile.avatar
+    else
+      'default-avatar.png'
+    end
+  end
+  
+  def prepare_profile
+    profile || build_profile
   end
 
 end

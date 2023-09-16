@@ -7,6 +7,7 @@ class CardcommentsController < ApplicationController
     def create
         task = Task.find(params[:task_id])
         @cardcomment = task.cardcomments.build(comment_params)
+        @cardcomment.user_id = current_user.id
         if @cardcomment.save
             redirect_to task_path(task), notice: 'コメントを追加'
         else
