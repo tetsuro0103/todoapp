@@ -1,0 +1,15 @@
+current directory: /Users/tetsu/todoapp/vendor/bundle/ruby/2.6.0/gems/debug_inspector-1.1.0/ext/debug_inspector
+/Users/tetsu/.rbenv/versions/2.6.6/bin/ruby -I /Users/tetsu/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20230916-73446-1trj0ot.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tetsu/todoapp/vendor/bundle/ruby/2.6.0/gems/debug_inspector-1.1.0/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/tetsu/todoapp/vendor/bundle/ruby/2.6.0/gems/debug_inspector-1.1.0/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/tetsu/todoapp/vendor/bundle/ruby/2.6.0/gems/debug_inspector-1.1.0/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20230916-73446-oistxe
